@@ -4,3 +4,6 @@
     - name: first task
       debug:
         msg: "my first task"
+    - name: second task
+      debug:
+        msg: "my second task"
