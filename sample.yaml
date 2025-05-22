@@ -9,8 +9,7 @@
     - name: second task
       debug:
         msg: "my second {{movie}}-2"
-    - name: third task
-      debug:
-        msg: "my third {{movie}}"
-        vars:
-           movie: "Jurrasic Park"
+    - debug:
+  msg: "my third {{movie}}"
+  vars:
+    movie: "Jurrasic Park"
