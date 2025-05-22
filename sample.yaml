@@ -1,15 +1,18 @@
 - name: my first playbook
   hosts: all
   vars:
-     movie: "money heist"
+    movie: "money heist"
   tasks:
     - name: first task
       debug:
-        msg: "my first {{movie}}"
+        msg: "my first {{ movie }}"
+    
     - name: second task
       debug:
-        msg: "my second {{movie}}-2"
-    - debug:
-  msg: "my third {{movie}}"
-  vars:
-    movie: "Jurrasic Park"
+        msg: "my second {{ movie }}-2"
+    
+    - name: third task
+      vars:
+        movie: "Jurrasic Park"
+      debug:
+        msg: "my third {{ movie }}"
