@@ -5,7 +5,7 @@
   tasks:
     - name: first task
       debug:
-        msg: "my first ${{movie}}"
+        msg: "my first {{movie}}"
     - name: second task
       debug:
-        msg: "my second ${{movie}}-2"
+        msg: "my second {{movie}}-2"
