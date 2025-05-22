@@ -2,8 +2,8 @@
   hosts: all
   vars:
     movie: "money heist"
-  var_files:
-     - ./var.txt
+  vars_files:
+    - ./var.txt
   tasks:
     - name: first task
       debug:
