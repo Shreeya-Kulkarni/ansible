@@ -4,6 +4,7 @@
     movie: "money heist"
   vars_files:
     - ./var.txt
+   vars_prompt: 
   tasks:
     - name: first task
       debug:
