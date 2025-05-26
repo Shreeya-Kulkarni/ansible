@@ -21,3 +21,8 @@
         movie: "Jurrasic Park"
       debug:
         msg: "my third {{ movie }}"
+  
+    - name: get hostname
+      shell: hostname
+      register: movie
+    - name: print hostname  
