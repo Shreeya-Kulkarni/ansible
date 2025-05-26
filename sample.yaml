@@ -1,9 +1,9 @@
 - name: my first playbook
   hosts: all
-  # vars:
-  #   movie: "money heist"
+  vars:
+    movie: "money heist"
   vars_files:
-    - ./var.yml
+    - ./var.txt
   tasks:
     - name: first task
       debug:
@@ -14,5 +14,7 @@
         msg: "my second {{ movie }}-2"
     
     - name: third task
+      vars:
+        movie: "Jurrasic Park"
       debug:
         msg: "my third {{ movie }}"
