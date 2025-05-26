@@ -25,4 +25,6 @@
     - name: get hostname
       shell: hostname
       register: movie
-    - name: print hostname  
+    - name: print hostname
+      debug: 
+        msg: "this is hostname"
