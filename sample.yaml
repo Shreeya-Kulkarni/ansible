@@ -3,7 +3,7 @@
   vars:
     movie: "money heist"
   vars_files:
-    - D:\Devops 2025\Devops\ansible\.autogit\var.txt
+    - ./var.txt
   tasks:
     - name: first task
       debug:
