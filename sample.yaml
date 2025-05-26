@@ -7,6 +7,7 @@
   vars_prompt: 
     - name: movie
       prompt: enter the name of the movie
+
   tasks:
     - name: first task
       debug:
@@ -24,7 +25,8 @@
   
     - name: get hostname
       shell: hostname
-      register: movie
+      register: hostname_output
+
     - name: print hostname
       debug: 
-        msg: "this is {{URL.stdout}}"
+        msg: "this is {{ hostname_output.stdout }}"
