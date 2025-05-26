@@ -28,5 +28,5 @@
       register: hostname_output
 
     - name: print hostname
-      debug: 
-        msg: "this is {{ hostname_output.stdout }}"
+  debug: 
+    msg: "this is {{ movie.stdout }}"
