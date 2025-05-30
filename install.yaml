@@ -25,8 +25,7 @@
     
 
     - name: Install httpd on RedHat-based systems
-      yum:
+      package:
         name: httpd
         state: present
-        update_cache: yes
       when: ansible_os_family == "RedHat"
