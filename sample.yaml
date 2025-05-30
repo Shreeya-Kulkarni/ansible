@@ -1,9 +1,13 @@
 - name: my first playbook
   hosts: all
+  gather_facts: yes
+
   vars:
     movie: "money heist"
+
   vars_files:
     - ./var.txt
+
   vars_prompt: 
     - name: movie
       prompt: enter the name of the movie
@@ -12,25 +16,25 @@
     - name: first task
       debug:
         msg: "my first {{ movie }}"
-    
+
     - name: second task
       debug:
         msg: "my second {{ movie }}-2"
 
-    - name: Gathering Facts
+    - name: Gathering OS family
       debug:
-        msg: "my second {{ansible_os_family}}"    
-    
-    - name: third task
+        msg: "my OS family is {{ ansible_os_family }}"
+
+    - name: third task with local var override
       vars:
-        movie: "Jurrasic Park"
+        movie: "Jurassic Park"
       debug:
         msg: "my third {{ movie }}"
-  
+
     - name: get hostname
       shell: hostname
       register: hostname_output
 
-- name: print hostname
-  debug: 
-    msg: "this is {{ movie.stdout }}"
+    - name: print hostname
+      debug: 
+        msg: "this is {{ hostname_output.stdout }}"
