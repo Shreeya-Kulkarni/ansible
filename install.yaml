@@ -1,9 +1,8 @@
-# yum amd apt modue
+# yum and apt module
 # conditions
-# privildges (root permission)
+# privileges (root permission)
 
-
-- name: Test Apache Installation
+- name: Test Apache and Nginx Installation
   hosts: all
   become: yes
   gather_facts: yes
@@ -23,9 +22,8 @@
         update_cache: yes
       when: ansible_os_family == "RedHat"
     
-
-    - name: Install httpd on RedHat-based systems
+    - name: Install nginx on Debian-based systems
       package:
-        name: ngnix
+        name: nginx
         state: present
       when: ansible_os_family == "Debian"
