@@ -16,9 +16,10 @@
     - name: second task
       debug:
         msg: "my second {{ movie }}-2"
-    - name: Gathering facts
+
+    - name: Gathering Facts
       debug:
-        msg: "my second {{ movie }}-2"    
+        msg: "my second {{ansible_os_family}}"    
     
     - name: third task
       vars:
