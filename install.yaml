@@ -1,20 +1,18 @@
-# install.yaml
-# Uses apt for Debian and yum for RedHat with conditions
-# Requires privilege escalation (become)
-
-- name: Installation File
+- name: Test Apache Installation
   hosts: all
   become: yes
-  tasks:
-    - name: install apache2 on Debian-based systems
-      apt: 
-        name: apache2
-        state: latest
-        update_cache: yes
-      when: ansible_os_family == "Debian"   
+  gather_facts: yes
 
-    - name: install httpd on RedHat-based systems
-      yum: 
+  tasks:
+    - name: Install apache2 on Debian-based systems
+      apt:
+        name: apache2
+        state: present
+        update_cache: yes
+      when: ansible_os_family == "Debian"
+
+    - name: Install httpd on RedHat-based systems
+      yum:
         name: httpd
         state: present
         update_cache: yes
