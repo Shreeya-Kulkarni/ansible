@@ -2,15 +2,8 @@
   hosts: all
   gather_facts: yes
 
-  # vars:
-  #   movie: "money heist"
-
-  # vars_files:
-  #   - ./var.txt
-
-  # vars_prompt: 
-  #   - name: movie
-  #     prompt: enter the name of the movie
+  vars:
+    movie: "money heist"
 
   tasks:
     - name: first task
@@ -38,7 +31,3 @@
     - name: print hostname
       debug: 
         msg: "this is {{ hostname_output.stdout }}"
-
-    - name: first task #  FROM HOST FILE WE CAN ALSO SEN DTHE MOVIE NAME USING NANO HOST 
-      debug:
-        msg: "my first {{ movie }}"
