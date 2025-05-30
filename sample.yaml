@@ -39,6 +39,6 @@
       debug: 
         msg: "this is {{ hostname_output.stdout }}"
 
-    - name: first task
+    - name: first task #  FROM HOST FILE WE CAN ALSO SEN DTHE MOVIE NAME USING NANO HOST 
       debug:
         msg: "my first {{ movie }}"
