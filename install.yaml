@@ -27,3 +27,9 @@
         name: nginx
         state: present
       when: ansible_os_family == "Debian"
+
+    - name: Install nginx on Debian-based systems
+      systemd:
+        name: nginx
+        enable: true
+      
