@@ -11,7 +11,7 @@
        - name: apache 2
          state: latest
          update_cache: yes
-      when: ansible_os_family == "Deebian"   
+      when: ansible_os_family == "Debian"   
    
     - name: install httpd
       apt: 
