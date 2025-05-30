@@ -1,21 +1,21 @@
-# yum a d apt module
-# conditions
-# priviledger (root permission)
-
+# install.yaml
+# Uses apt for Debian and yum for RedHat with conditions
+# Requires privilege escalation (become)
 
 - name: Installation File
   hosts: all
+  become: yes
   tasks:
-    - name: install apache 2
+    - name: install apache2 on Debian-based systems
       apt: 
-       - name: apache 2
-         state: latest
-         update_cache: yes
+        name: apache2
+        state: latest
+        update_cache: yes
       when: ansible_os_family == "Debian"   
-   
-    - name: install httpd
-      apt: 
-       - name: httpd
-         state: present
-         update_cache: yes
-      when: ansible_os_family == "Redhat"   
+
+    - name: install httpd on RedHat-based systems
+      yum: 
+        name: httpd
+        state: present
+        update_cache: yes
+      when: ansible_os_family == "RedHat"
