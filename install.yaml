@@ -1,3 +1,14 @@
 # yum a d apt module
 # conditions
 # priviledger (root permission)
+
+
+- name: Installation File
+  hosts: all
+  tasks:
+    - name: install apache 2
+      apt: 
+       - name: apache 2
+         state: latest
+         update_cache: yes
+      when:   
