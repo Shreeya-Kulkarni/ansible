@@ -31,6 +31,6 @@
       shell: hostname
       register: hostname_output
 
-    - name: print hostname
+- name: print hostname
   debug: 
     msg: "this is {{ movie.stdout }}"
