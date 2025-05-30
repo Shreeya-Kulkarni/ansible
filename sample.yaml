@@ -16,6 +16,9 @@
     - name: second task
       debug:
         msg: "my second {{ movie }}-2"
+    - name: second task
+      debug:
+        msg: "my second {{ movie }}-2"    
     
     - name: third task
       vars:
