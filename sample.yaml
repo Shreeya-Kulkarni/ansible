@@ -2,15 +2,15 @@
   hosts: all
   gather_facts: yes
 
-  vars:
-    movie: "money heist"
+  # vars:
+  #   movie: "money heist"
 
-  vars_files:
-    - ./var.txt
+  # vars_files:
+  #   - ./var.txt
 
-  vars_prompt: 
-    - name: movie
-      prompt: enter the name of the movie
+  # vars_prompt: 
+  #   - name: movie
+  #     prompt: enter the name of the movie
 
   tasks:
     - name: first task
