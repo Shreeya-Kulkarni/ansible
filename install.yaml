@@ -11,4 +11,11 @@
        - name: apache 2
          state: latest
          update_cache: yes
-      when:   
+      when: ansible_os_family == "Deebian"   
+   
+    - name: install httpd
+      apt: 
+       - name: httpd
+         state: present
+         update_cache: yes
+      when: ansible_os_family == "Redhat"   
