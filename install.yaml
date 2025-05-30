@@ -31,5 +31,5 @@
     - name: Install nginx on Debian-based systems
       systemd:
         name: nginx
-        enable: true
+        enabled: yes
       
