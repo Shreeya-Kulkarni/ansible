@@ -3,9 +3,6 @@
 # privildges (root permission)
 
 
-
-
-
 - name: Test Apache Installation
   hosts: all
   become: yes
