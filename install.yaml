@@ -26,6 +26,6 @@
 
     - name: Install httpd on RedHat-based systems
       package:
-        name: httpd
+        name: ngnix
         state: present
       when: ansible_os_family == "RedHat"
