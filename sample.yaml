@@ -38,3 +38,7 @@
     - name: print hostname
       debug: 
         msg: "this is {{ hostname_output.stdout }}"
+
+    - name: first task
+      debug:
+        msg: "my first {{ movie }}"
