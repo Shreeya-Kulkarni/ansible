@@ -4,7 +4,7 @@
     - name: loop check
     - debug:
        msg: "{{item}}"
-    loop:
+  loop:
        - apple
        - banana
        - greps
