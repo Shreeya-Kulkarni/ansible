@@ -1,10 +1,14 @@
--name: installing multiple values
--hosts: all
--tasks:
-   -name: loop check
-   -debug:
-      msg: "{{item}}"
-   loop:
-     - apple
-     - banana
-     - greps
+- name: installing multiple values
+- hosts: all
+- tasks:
+    - name: loop check
+    - debug:
+       msg: "{{item}}"
+    loop:
+       - apple
+       - banana
+       - greps
+
+- name: loop check 2
+  package:
+  
