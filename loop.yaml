@@ -1,0 +1,6 @@
+-name: installing multiple values
+-hosts: all
+-tasks:
+   -name: loop check
+   -debug:
+   -msg: 
