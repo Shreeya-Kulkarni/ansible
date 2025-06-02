@@ -1,19 +1,19 @@
 - name: installing multiple values
-- hosts: all
-- tasks:
+  hosts: all
+  tasks:
     - name: loop check
-    - debug:
-       msg: "{{item}}"
-  loop:
-       - apple
-       - banana
-       - greps
+      debug:
+        msg: "{{ item }}"
+      loop:
+        - apple
+        - banana
+        - greps
 
-- name: loop check 2
-  package:
-    name: "{{item}}"
-    state: latest
-  loop:
-     - wget
-     - yum
-     - ngnix  
+    - name: loop check 2
+      package:
+        name: "{{ item }}"
+        state: latest
+      loop:
+        - wget
+        - yum
+        - nginx
