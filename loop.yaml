@@ -11,4 +11,5 @@
 
 - name: loop check 2
   package:
-  
+    name: "{{item}}"
+    state: latest
