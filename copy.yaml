@@ -5,3 +5,8 @@
     apt:
       name: apache 2 
       state: latest 
+
+  - name: start apache 2
+    service:
+      name: apache 2 
+      state: latest     
