@@ -1,19 +1,20 @@
 - name: my copy module usecase
-- hosts: all
-- tasks:
-  - name: install apache 2
-    apt:
-      name: apache 2 
-      state: latest 
+  hosts: all
+  become: yes
+  tasks:
+    - name: install apache2
+      apt:
+        name: apache2
+        state: latest
+        update_cache: yes
 
-  - name: start apache 2
-    service:
-      name: apache 2 
-      state: restarted
-      enabled: true
+    - name: start apache2
+      service:
+        name: apache2
+        state: restarted
+        enabled: true
 
-
-  - name: deployment
-    copy:
-      src: ./index.html
-      dest: /var/www/html/index.html    
+    - name: deployment
+      copy:
+        src: ./index.html
+        dest: /var/www/html/index.html
