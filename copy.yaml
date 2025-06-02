@@ -2,4 +2,6 @@
 - hosts: all
 - tasks:
   - name: install apache 2
-    apt: 
+    apt:
+      name: apache 2 
+      state: latest 
