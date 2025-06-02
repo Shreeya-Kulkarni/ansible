@@ -9,4 +9,11 @@
   - name: start apache 2
     service:
       name: apache 2 
-      state: latest     
+      state: restarted
+      enabled: true
+
+
+  - name: deployment
+    copy:
+      src: ./index.html
+      dest: /var/www/html/index.html    
