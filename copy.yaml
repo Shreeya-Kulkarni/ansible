@@ -1,0 +1,5 @@
+- name: my copy module usecase
+- hosts: all
+- tasks:
+  - name: install apache 2
+    apt: 
