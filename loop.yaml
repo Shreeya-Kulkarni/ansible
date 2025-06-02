@@ -13,3 +13,7 @@
   package:
     name: "{{item}}"
     state: latest
+  loop:
+     - wget
+     - yum
+     - ngnix  
