@@ -1,4 +1,4 @@
-FROM centos:9
+FROM alpine
 ENV project=devops
 WORKDIR /opt/
 ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.105/bin/apache-tomcat-9.0.105.tar.gz/opt/
