@@ -1,5 +1,4 @@
 FROM centos:9
-
 WORKDIR /opt/
 ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.105/bin/apache-tomcat-9.0.105.tar.gz/opt/
-COPY index.html var/www/html/ dest
+COPY index.html var/www/html/index.html 
