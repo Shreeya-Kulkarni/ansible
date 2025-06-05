@@ -25,3 +25,4 @@ COPY index.html  .
 EXPOSE 80
 
 # start apache inforeground
+CMD [ "/usr/bin/httpd", "-D", "FOREGROUND" ]
