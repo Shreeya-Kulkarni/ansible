@@ -5,7 +5,7 @@ FROM alpine:latest
 RUN apk update && apk add --no-cache apache2
 
 # Set environment variable
-ENV project=devops
+ENV project=dev
 
 # Set working directory (Apache default in Alpine)
 WORKDIR /var/www/localhost/htdocs/
