@@ -21,4 +21,4 @@ WORKDIR /var/www/localhost/htdocs/
 # copy index.html to apache's working directory
 COPY index.html  .
 
-#
+# expose port 80
