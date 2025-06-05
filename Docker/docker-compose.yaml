@@ -5,4 +5,7 @@ services:
     image: shreeya0302/my-repo:v1
     ports:
       -80:80
-    e   
+    environment:
+      - department=dev
+  backend:
+    image: shreeya0302/my-repo:alpine     
