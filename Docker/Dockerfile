@@ -22,3 +22,6 @@ WORKDIR /var/www/localhost/htdocs/
 COPY index.html  .
 
 # expose port 80
+EXPOSE 80
+
+# start apache inforeground
