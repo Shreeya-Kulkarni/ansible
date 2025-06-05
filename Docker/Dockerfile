@@ -8,4 +8,4 @@ CMD [ "httpd -D FOREGROUND" ]
 
 FROM alpine: latest
 
-#I
+#Insttall apache 
