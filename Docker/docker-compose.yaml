@@ -9,3 +9,5 @@ services:
       - department=dev
   backend:
     image: shreeya0302/my-repo:alpine     
+    ports:
+      -8080:80 
