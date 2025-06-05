@@ -6,6 +6,7 @@ COPY index.html var/www/html/index.html
 EXPOSE 80
 CMD [ "httpd -D FOREGROUND" ]
 
-FROM alpine: latest
+FROM alpine:latest
 
-#Insttall apache 
+#Insttall apache http server
+RUN apk update && apk add --n
