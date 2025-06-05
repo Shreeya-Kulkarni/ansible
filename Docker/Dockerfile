@@ -1,28 +1,20 @@
-FROM alpine
-ENV project=devops
-WORKDIR /opt/
-RUN yum install httpd -y
-COPY index.html var/www/html/index.html 
-EXPOSE 80
-CMD [ "httpd -D FOREGROUND" ]
-
+# Use Alpine base image
 FROM alpine:latest
 
-# Insttall apache http server
-RUN apk update && apk add --no-cache apache 2
+# Install Apache HTTP Server
+RUN apk update && apk add --no-cache apache2
 
-
-# set environmanet variable
+# Set environment variable
 ENV project=devops
 
-# set working directore
+# Set working directory (Apache default in Alpine)
 WORKDIR /var/www/localhost/htdocs/
 
-# copy index.html to apache's working directory
-COPY index.html  .
+# Copy your HTML file into the Apache web root
+COPY index.html .
 
-# expose port 80
+# Expose port 80
 EXPOSE 80
 
-# start apache inforeground
-CMD [ "/usr/sbin/httpd", "-D", "FOREGROUND" ]
+# Start Apache in foreground
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
