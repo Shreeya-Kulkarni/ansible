@@ -4,10 +4,11 @@ services:
   webserver:
     image: shreeya0302/my-repo:v1
     ports:
-      -80:80
+      - "80:80"
     environment:
       - department=dev
+
   backend:
     image: shreeya0302/my-repo:alpine     
     ports:
-      -8080:80 
+      - "8080:80"
