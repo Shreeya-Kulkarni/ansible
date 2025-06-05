@@ -2,4 +2,7 @@ version: '3'
 
 services:
   webserver:
-    image: imageName
+    image: shreeya0302/my-repo:v1
+    ports:
+      -80:80
+    e   
