@@ -18,3 +18,28 @@ EXPOSE 80
 
 # Start Apache in foreground
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
